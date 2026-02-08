@@ -28,7 +28,7 @@
 </header>
 
 
-  <main class="container">
+  <main class="container container-post">
     <article class="post">
   <header>
     <h1>postno1</h1>
@@ -37,14 +37,26 @@
     </p>
   </header>
 
-  <section class="post-content">
-    <h2 id="abc"><a href="#abc" class="headerlink" title="abc"></a>abc</h2><ul>
+  
+  
+  <div class="post-layout">
+    <section class="post-content">
+      <h2 id="abc"><a href="#abc" class="headerlink" title="abc"></a>abc</h2><ul>
 <li>First</li>
 <li>Second</li>
 <li>Third<br>This is the content.</li>
 </ul>
 
-  </section>
+    </section>
+    
+      <aside class="post-toc" aria-label="Table of contents">
+        <h2 class="post-toc-title">Sections</h2>
+        <div class="post-toc-body">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#abc"><span class="toc-text">abc</span></a></li></ol>
+        </div>
+      </aside>
+    
+  </div>
 
   <nav class="post-nav">
     

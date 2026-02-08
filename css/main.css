@@ -36,6 +36,10 @@ a:hover {
   padding: 0 20px;
 }
 
+.container-post {
+  max-width: 1100px;
+}
+
 .site-header {
   border-bottom: 1px solid var(--line);
   margin-bottom: 32px;
@@ -82,6 +86,54 @@ a:hover {
   height: auto;
 }
 
+.post-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 48px;
+  align-items: start;
+}
+
+.post-content {
+  min-width: 0;
+}
+
+.post-toc {
+  position: sticky;
+  top: 24px;
+  border-left: 1px solid var(--line);
+  padding-left: 16px;
+}
+
+.post-toc-title {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.post-toc .toc {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.post-toc .toc-item {
+  margin: 6px 0;
+}
+
+.post-toc .toc-link {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.post-toc .toc-link:hover {
+  color: var(--link);
+}
+
+.post-toc .toc-child {
+  margin-top: 6px;
+  padding-left: 14px;
+}
+
 .post-nav {
   margin-top: 36px;
   padding-top: 16px;
@@ -97,4 +149,23 @@ a:hover {
   padding: 24px 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .container-post {
+    max-width: var(--max-width);
+  }
+
+  .post-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .post-toc {
+    position: static;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 12px;
+  }
 }
